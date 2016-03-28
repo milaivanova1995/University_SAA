@@ -12,7 +12,7 @@ Exercise1::~Exercise1()
 }
 
 
-int** fillMatrix() {
+int** Exercise1::fillMatrix() {
 	cout << "Enter the element of the matrix:" << endl;
 	int** matrix = 0;
 	matrix = new int*[3];
@@ -25,7 +25,7 @@ int** fillMatrix() {
 	return matrix;
 }
 
-bool isQuadratic(int** matrix, int size) {
+bool Exercise1::isQuadratic(int** matrix, int size) {
 	for (int i = 0; i < size - 1; i++) {
 		for (int j = 1; j < size - 1; j++) {
 			if (matrix[i][j] != matrix[i][j - 1]) {
@@ -36,7 +36,7 @@ bool isQuadratic(int** matrix, int size) {
 	return true;
 }
 
-void printMatrix(int** matrix) {
+void Exercise1::printMatrix(int** matrix) {
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
 			cout << " " << matrix[i][j] << " ";
@@ -45,7 +45,7 @@ void printMatrix(int** matrix) {
 	}
 }
 
-void printResult() {
+void Exercise1::printResult() {
 	int** matrix = fillMatrix();
 	bool flag = isQuadratic(matrix, 3);
 	printMatrix(matrix);
