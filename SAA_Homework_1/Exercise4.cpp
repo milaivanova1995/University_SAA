@@ -27,7 +27,7 @@ int* Exercise4:: fillArray() {
 
 bool Exercise4::checkArray(int array[]) {
 	for (int i = 0; i < sizeof(array) / 4; i++) {
-		if (array[i - 1] < array[i]) {
+		if (array[i] < array[i + 1] && array[i + 1] > array[i + 2]) {
 			return 1;
 		}
 	}
